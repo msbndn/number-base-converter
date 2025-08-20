@@ -10,19 +10,29 @@ def conversion(input_value: str, notation_from: int , notation_to: int) -> str:
     return conversion_from_decimal(decimal_value, notation_to)
 
 def __main__():
+    """
+    Input numeral systems (notations) and value. Validates it. Calculate.
+
+    Args:
+        -
+        
+    Returns:
+        -
+    """
+    
     while(True):
         clear_terminal()
         
         print("Converter\n")
 
-        # Ввод систем счисления
+        # Input numeral system
         notation_from = input("Enter notation from (or 0 to exit): ")
         if notation_from == '0' or notation_from == '': break
 
         notation_to = input("Enter notation to (or 0 to exit): ")
         if notation_to == '0' or notation_to == '': break
 
-        # Валидация ввода систем счисления
+        # Validation numeral systems input
         try:
             notation_from = int(notation_from)
             notation_to = int(notation_to)
@@ -34,7 +44,7 @@ def __main__():
             print("Error: base must be between 2 and 36")
             continue
 
-        # Валидация ввода числа
+        # Validation input value
         is_positive = True
         while True:
             input_value = input("\nEnter value: ").upper()
@@ -48,13 +58,13 @@ def __main__():
                 break
             print(f"Error: value '{input_value}' is not valid for base {notation_from}")
                 
-        # Вычисление результата
+        # Calculation
         result = conversion(str(input_value), notation_from, notation_to)
         
         if is_positive == False:
             result = '-' + result
 
-        # Вывод результата
+        # Result
         print("\nResult:", result)
 
         input("Press Enter to continue...")
