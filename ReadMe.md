@@ -67,15 +67,15 @@ Result: 110001.010100011110
 ```
 
 ## Main functions
-- conversion_to_decimal(value: str, notation: int) -> str
+- "conversion_to_decimal(value: str, notation: int) -> str" 
   Converts a number from any numberal system to decimal.
-- conversion_from_decimal(value: str, notation: int) -> str
+- "conversion_from_decimal(value: str, notation: int) -> str" 
   Converts a decimal number to the target numberal system.
-- conversion(input_value: str, notation_from: int, notation_to: int) -> str
+- "conversion(input_value: str, notation_from: int, notation_to: int) -> str" 
   Converts a number from one numeral system to another.
-- validate_value(value: str, notation: int) -> bool
+- "validate_value(value: str, notation: int) -> bool" 
   Validates if a number is correct in the given numeral system.
-- is_fraction(value: str) -> bool
+- "is_fraction(value: str) -> bool" 
   Checks if a number has a fractional part.
 
 ## Limitations
